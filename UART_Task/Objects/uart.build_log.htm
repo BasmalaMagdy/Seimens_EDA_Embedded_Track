@@ -1,0 +1,430 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.32.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: basmala magdy, student, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.32.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.14.1
+Assembler:       Armasm.exe V6.14.1
+Linker/Locator:  ArmLink.exe V6.14.1
+Library Manager: ArmAr.exe V6.14.1
+Hex Converter:   FromElf.exe V6.14.1
+CPU DLL:         SARMCM3.DLL V5.32.0.0
+Dialog DLL:      DCM.DLL V1.17.3.0
+Target DLL:      UL2CM3.DLL V1.163.9.0
+Dialog DLL:      TCM.DLL V1.46.0.0
+ 
+<h2>Project:</h2>
+F:\Embeded diploma\Siemens\Tasks\uart.uvprojx
+Project File Date:  08/18/2021
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.14.1', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+Rebuild target 'Target 1'
+assembling startup_TM4C123.s...
+Uart.c(7): warning: In file included from...
+./platform_types.h(47): warning: no newline at end of file [-Wnewline-eof]
+#endif 
+       ^
+Uart.c(8): warning: In file included from...
+./Uart.h(49): warning: no newline at end of file [-Wnewline-eof]
+#endif /* UART_H_ */
+                    ^
+Uart.c(28): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        UART0_CTL_R &= ~(1<<0);                     /* Disable UART0 enable */
+                    ~~ ^~~~~~~
+Uart.c(42): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+            UART0_LCRH_R &= ~(1<<6);
+                         ~~ ^~~~~~~
+Uart.c(46): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+            UART0_LCRH_R &= ~(1<<5);
+                         ~~ ^~~~~~~
+Uart.c(64): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIO_PORTA_AMSEL_R &= (~(1<<0)) &(~(1<<1));                   /* Disable Analog on pins 0, 1 */
+                           ~~ ~~~~~~~~~~^~~~~~~~~~
+Uart.c(72): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        UART1_CTL_R &= ~(1<<0);      /* Disable UART1 enable */
+                    ~~ ^~~~~~~
+Uart.c(86): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+            UART1_LCRH_R &= ~(1<<6);
+                         ~~ ^~~~~~~
+Uart.c(90): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+            UART1_LCRH_R &= ~(1<<5);
+                         ~~ ^~~~~~~
+Uart.c(109): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIO_PORTB_AMSEL_R &= (~(1<<0)) & (~(1<<1));                   /* Disable Analog on pins 0, 1 */
+                           ~~ ~~~~~~~~~~^~~~~~~~~~~
+Uart.c(117): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        UART1_CTL_R &= ~(1<<0);      /* Disable UART1 enable */
+                    ~~ ^~~~~~~
+Uart.c(131): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+            UART1_LCRH_R &= ~(1<<6);
+                         ~~ ^~~~~~~
+Uart.c(135): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+            UART1_LCRH_R &= ~(1<<5);
+                         ~~ ^~~~~~~
+Uart.c(154): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIO_PORTC_AMSEL_R &= (~(1<<4)) & (~(1<<5));                  /* Disable Analog on pins 4, 5 */
+                           ~~ ~~~~~~~~~~^~~~~~~~~~~
+Uart.c(161): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        UART3_CTL_R &= ~(1<<0);      /* Disable UART3 enable */
+                    ~~ ^~~~~~~
+Uart.c(175): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+            UART3_LCRH_R &= ~(1<<6);
+                         ~~ ^~~~~~~
+Uart.c(179): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+            UART3_LCRH_R &= ~(1<<5);
+                         ~~ ^~~~~~~
+Uart.c(198): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIO_PORTC_AMSEL_R &= (~(1<<6)) & (~(1<<7));                  /* Disable Analog on pins 6, 7 */
+                           ~~ ~~~~~~~~~~^~~~~~~~~~~
+Uart.c(206): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        UART4_CTL_R &= ~(1<<0);      /* Disable UART4 enable */
+                    ~~ ^~~~~~~
+Uart.c(220): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+            UART4_LCRH_R &= ~(1<<6);
+                         ~~ ^~~~~~~
+Uart.c(224): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+            UART4_LCRH_R &= ~(1<<5);
+                         ~~ ^~~~~~~
+Uart.c(243): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIO_PORTC_AMSEL_R &= (~(1<<4)) & (~(1<<5));                  /* Disable Analog on pins 4, 5 */
+                           ~~ ~~~~~~~~~~^~~~~~~~~~~
+Uart.c(251): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        UART5_CTL_R &= ~(1<<0);      /* Disable UART5 enable */
+                    ~~ ^~~~~~~
+Uart.c(265): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+            UART5_LCRH_R &= ~(1<<6);
+                         ~~ ^~~~~~~
+Uart.c(269): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+            UART5_LCRH_R &= ~(1<<5);
+                         ~~ ^~~~~~~
+Uart.c(288): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIO_PORTE_AMSEL_R &= (~(1<<5)) & (~(1<<4));                  /* Disable Analog on pins 4, 5 */
+                           ~~ ~~~~~~~~~~^~~~~~~~~~~
+Uart.c(296): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        UART6_CTL_R &= ~(1<<0);      /* Disable UART6 enable */
+                    ~~ ^~~~~~~
+Uart.c(310): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+            UART6_LCRH_R &= ~(1<<6);
+                         ~~ ^~~~~~~
+Uart.c(314): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+            UART6_LCRH_R &= ~(1<<5);
+                         ~~ ^~~~~~~
+Uart.c(333): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIO_PORTD_AMSEL_R &= (~(1<<5)) & (~(1<<4));                  /* Disable Analog on pins 4, 5 */
+                           ~~ ~~~~~~~~~~^~~~~~~~~~~
+Uart.c(340): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        UART7_CTL_R &= ~(1<<0);      /* Disable UART7 enable */
+                    ~~ ^~~~~~~
+Uart.c(354): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+            UART7_LCRH_R &= ~(1<<6);
+                         ~~ ^~~~~~~
+Uart.c(358): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+            UART7_LCRH_R &= ~(1<<5);
+                         ~~ ^~~~~~~
+Uart.c(377): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIO_PORTE_AMSEL_R &= (~(1<<1)) & (~(1<<0));                  /* Disable Analog on pins 0, 1 */
+                           ~~ ~~~~~~~~~~^~~~~~~~~~~
+Uart.c(529): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+35 warnings generated.
+compiling Uart.c...
+RTE/Device/TM4C123GH6PM/system_TM4C123.c(13): warning: In file included from...
+C:/Users/hs/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123\TM4C123.h(98): warning: In file included from...
+C:/Users/hs/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(298): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/hs/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(338): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/hs/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(357): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/hs/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(713): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/hs/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(729): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/hs/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(774): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/hs/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(779): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/hs/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(872): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/hs/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(885): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/hs/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(892): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/hs/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(897): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/hs/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(904): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/hs/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(910): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/hs/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(917): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/hs/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(924): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/hs/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(929): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/hs/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(936): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/hs/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(942): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/hs/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(949): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/hs/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(956): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/hs/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(961): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/hs/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(968): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/hs/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(974): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/hs/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(981): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/hs/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(988): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/hs/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(993): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/hs/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1000): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/hs/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1006): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/hs/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1013): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/hs/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1020): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/hs/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1025): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/hs/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1032): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/hs/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1038): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/hs/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1045): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/hs/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1052): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/hs/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1057): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/hs/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1064): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/hs/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1070): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/hs/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1077): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/hs/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1084): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/hs/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1089): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/hs/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1096): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/hs/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1102): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+C:/Users/hs/AppData/Local/Arm/Packs/Keil/TM4C_DFP/1.1.0/Device/Include/TM4C123/TM4C123GH6PM.h(1251): warning: anonymous unions are a C11 extension [-Wc11-extensions]
+  union {
+  ^
+44 warnings generated.
+compiling system_TM4C123.c...
+main.c(4): warning: In file included from...
+./Uart.c(7): warning: In file included from...
+./platform_types.h(47): warning: no newline at end of file [-Wnewline-eof]
+#endif 
+       ^
+main.c(4): warning: In file included from...
+./Uart.c(8): warning: In file included from...
+./Uart.h(49): warning: no newline at end of file [-Wnewline-eof]
+#endif /* UART_H_ */
+                    ^
+main.c(4): warning: In file included from...
+./Uart.c(28): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        UART0_CTL_R &= ~(1<<0);                     /* Disable UART0 enable */
+                    ~~ ^~~~~~~
+./Uart.c(42): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+            UART0_LCRH_R &= ~(1<<6);
+                         ~~ ^~~~~~~
+./Uart.c(46): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+            UART0_LCRH_R &= ~(1<<5);
+                         ~~ ^~~~~~~
+./Uart.c(64): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIO_PORTA_AMSEL_R &= (~(1<<0)) &(~(1<<1));                   /* Disable Analog on pins 0, 1 */
+                           ~~ ~~~~~~~~~~^~~~~~~~~~
+./Uart.c(72): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        UART1_CTL_R &= ~(1<<0);      /* Disable UART1 enable */
+                    ~~ ^~~~~~~
+./Uart.c(86): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+            UART1_LCRH_R &= ~(1<<6);
+                         ~~ ^~~~~~~
+./Uart.c(90): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+            UART1_LCRH_R &= ~(1<<5);
+                         ~~ ^~~~~~~
+./Uart.c(109): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIO_PORTB_AMSEL_R &= (~(1<<0)) & (~(1<<1));                   /* Disable Analog on pins 0, 1 */
+                           ~~ ~~~~~~~~~~^~~~~~~~~~~
+./Uart.c(117): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        UART1_CTL_R &= ~(1<<0);      /* Disable UART1 enable */
+                    ~~ ^~~~~~~
+./Uart.c(131): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+            UART1_LCRH_R &= ~(1<<6);
+                         ~~ ^~~~~~~
+./Uart.c(135): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+            UART1_LCRH_R &= ~(1<<5);
+                         ~~ ^~~~~~~
+./Uart.c(154): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIO_PORTC_AMSEL_R &= (~(1<<4)) & (~(1<<5));                  /* Disable Analog on pins 4, 5 */
+                           ~~ ~~~~~~~~~~^~~~~~~~~~~
+./Uart.c(161): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        UART3_CTL_R &= ~(1<<0);      /* Disable UART3 enable */
+                    ~~ ^~~~~~~
+./Uart.c(175): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+            UART3_LCRH_R &= ~(1<<6);
+                         ~~ ^~~~~~~
+./Uart.c(179): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+            UART3_LCRH_R &= ~(1<<5);
+                         ~~ ^~~~~~~
+./Uart.c(198): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIO_PORTC_AMSEL_R &= (~(1<<6)) & (~(1<<7));                  /* Disable Analog on pins 6, 7 */
+                           ~~ ~~~~~~~~~~^~~~~~~~~~~
+./Uart.c(206): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        UART4_CTL_R &= ~(1<<0);      /* Disable UART4 enable */
+                    ~~ ^~~~~~~
+./Uart.c(220): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+            UART4_LCRH_R &= ~(1<<6);
+                         ~~ ^~~~~~~
+./Uart.c(224): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+            UART4_LCRH_R &= ~(1<<5);
+                         ~~ ^~~~~~~
+./Uart.c(243): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIO_PORTC_AMSEL_R &= (~(1<<4)) & (~(1<<5));                  /* Disable Analog on pins 4, 5 */
+                           ~~ ~~~~~~~~~~^~~~~~~~~~~
+./Uart.c(251): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        UART5_CTL_R &= ~(1<<0);      /* Disable UART5 enable */
+                    ~~ ^~~~~~~
+./Uart.c(265): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+            UART5_LCRH_R &= ~(1<<6);
+                         ~~ ^~~~~~~
+./Uart.c(269): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+            UART5_LCRH_R &= ~(1<<5);
+                         ~~ ^~~~~~~
+./Uart.c(288): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIO_PORTE_AMSEL_R &= (~(1<<5)) & (~(1<<4));                  /* Disable Analog on pins 4, 5 */
+                           ~~ ~~~~~~~~~~^~~~~~~~~~~
+./Uart.c(296): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        UART6_CTL_R &= ~(1<<0);      /* Disable UART6 enable */
+                    ~~ ^~~~~~~
+./Uart.c(310): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+            UART6_LCRH_R &= ~(1<<6);
+                         ~~ ^~~~~~~
+./Uart.c(314): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+            UART6_LCRH_R &= ~(1<<5);
+                         ~~ ^~~~~~~
+./Uart.c(333): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIO_PORTD_AMSEL_R &= (~(1<<5)) & (~(1<<4));                  /* Disable Analog on pins 4, 5 */
+                           ~~ ~~~~~~~~~~^~~~~~~~~~~
+./Uart.c(340): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        UART7_CTL_R &= ~(1<<0);      /* Disable UART7 enable */
+                    ~~ ^~~~~~~
+./Uart.c(354): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+            UART7_LCRH_R &= ~(1<<6);
+                         ~~ ^~~~~~~
+./Uart.c(358): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+            UART7_LCRH_R &= ~(1<<5);
+                         ~~ ^~~~~~~
+./Uart.c(377): warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+        GPIO_PORTE_AMSEL_R &= (~(1<<1)) & (~(1<<0));                  /* Disable Analog on pins 0, 1 */
+                           ~~ ~~~~~~~~~~^~~~~~~~~~~
+./Uart.c(529): warning: no newline at end of file [-Wnewline-eof]
+}
+ ^
+35 warnings generated.
+compiling main.c...
+linking...
+.\Objects\uart.axf: Error: L6200E: Symbol UART_sendByte multiply defined (by main.o and uart.o).
+.\Objects\uart.axf: Error: L6200E: Symbol UART_init multiply defined (by main.o and uart.o).
+.\Objects\uart.axf: Error: L6200E: Symbol UART_receiveString multiply defined (by main.o and uart.o).
+.\Objects\uart.axf: Error: L6200E: Symbol UART_sendString multiply defined (by main.o and uart.o).
+.\Objects\uart.axf: Error: L6200E: Symbol UART_recieveByte multiply defined (by main.o and uart.o).
+Not enough information to list image symbols.
+Not enough information to list load addresses in the image map.
+Finished: 2 information, 0 warning and 5 error messages.
+".\Objects\uart.axf" - 5 Error(s), 114 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.7.0.pack
+                ARM.CMSIS.5.7.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.4.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.TM4C_DFP.1.1.0.pack
+                Keil.TM4C_DFP.1.1.0
+                Texas Instruments Tiva C Series Device Support and Examples
+   * Component: Startup Version: 1.0.1
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Target_1
+  C:\Users\hs\AppData\Local\Arm\Packs\ARM\CMSIS\5.7.0\CMSIS\Core\Include
+  C:\Users\hs\AppData\Local\Arm\Packs\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.4.0
+
+   * Component: Keil::Device:Startup:1.0.1
+      Source file:   Device\Source\system_TM4C123.c
+      Include file:  Device\Include\TM4C123\TM4C123.h
+      Source file:   Device\Source\ARM\startup_TM4C123.s
+Target not created.
+Build Time Elapsed:  00:00:13
+</pre>
+</body>
+</html>
