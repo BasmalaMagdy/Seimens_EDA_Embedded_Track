@@ -1,0 +1,16 @@
+/*
+ * reg_map.h
+ *
+ *  Created on: Sep 7, 2021
+ *      Author: hs
+ */
+
+#ifndef REG_MAP_H_
+#define REG_MAP_H_
+
+#define CAN0  (unsigned long)(0x40040000)
+#define CAN1  (unsigned long)(0x40041000)
+
+
+
+#endif /* REG_MAP_H_ */

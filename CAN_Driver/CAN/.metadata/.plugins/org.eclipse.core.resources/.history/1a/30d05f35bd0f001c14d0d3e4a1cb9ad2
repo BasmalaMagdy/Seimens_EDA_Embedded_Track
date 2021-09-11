@@ -1,0 +1,16 @@
+/*
+ * can.h
+ *
+ *  Created on: Sep 7, 2021
+ *      Author: hs
+ */
+
+#ifndef CAN_H_
+#define CAN_H_
+
+#define RCGC0_CLOCK_MODE       (*((volatile unsigned long*)0x400FE100))
+#define RCGC2_CLOCK_PORT       (*((volatile unsigned long*)0x400FE108))
+
+
+
+#endif /* CAN_H_ */

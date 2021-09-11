@@ -1,0 +1,31 @@
+/*
+ * can.c
+ *
+ *  Created on: Sep 7, 2021
+ *      Author: Basmala Magdy
+ */
+
+
+static void CANx_PIN_INIT(uint_16 canX , char portX)
+{
+    if(canX == CAN0)
+    {
+        uint_16 delay;
+        RCGC0_CLOCK_MODULE|=(1<< CAN0); //enable the can clock of the module CAN0 pin = 24  ,p= 457
+        if(portX == B)
+        {
+            RCGC2_CLOCK_PORT|=(1<<1);   //enable  the clock of portB RX PB4 TX PB5
+            delay = RCGC2_CLOCK_PORT;
+        }
+        if(portX == E)
+        {
+            RCGC2_CLOCK_PORT|=(1<<4);   //enable  the clock of portB RX PB4 TX PB5
+            delay = RCGC2_CLOCK_PORT;
+        }
+
+    }
+    if(canX == CAN1)
+    {
+        RCGC0_CLOCK_MODULE|=(1<< CAN1); //enable the can clock of the module CAN1 pin = 25 ,p= 457
+    }
+}

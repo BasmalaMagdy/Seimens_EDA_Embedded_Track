@@ -1,0 +1,119 @@
+/*
+ * can.c
+ *
+ *  Created on: Sep 7, 2021
+ *      Author: Basmala Magdy
+ */
+#include "std_types.h"
+#include "tm4c123gh6pm.h"
+#include "can.h"
+
+static void CANx_PIN_INIT(CAN_Config *config)
+{
+    if(config->can_mode == CAN_0)
+    {
+        uint16_t delay;
+        RCGC0_CLOCK_MODE|=(1<< can0); //enable the can clock of the module CAN0 pin = 24  ,p= 457
+        if(config->can_port == B)
+        {
+            RCGC2_CLOCK_PORT|=(1<< GPIOB);   //enable  the clock of portB RX = PB4 TX = PB5 ,p=465
+            delay = RCGC2_CLOCK_PORT;
+            GPIO_PORTB_LOCK_R = GPIO_LOCK_KEY;
+            GPIO_PORTB_CR_R |= 0x30;
+            GPIO_PORTB_AMSEL_R &= ~0x30;
+            GPIO_PORTB_PCTL_R &= ~ 0x00ff0000;
+            GPIO_PORTB_AFSEL_R &= ~ 0x30                // is no alternate fun ?????????????????????????????
+                    GPIO_PORTB_DEN_R |= 0x30;
+            GPIO_PORTB_DIR_R |= 0x30;
+            GPIO_PORTB_DATA_R &= ~0x30;
+        }
+        if(config->can_port == E)
+        {
+            RCGC2_CLOCK_PORT|=(1<<GPIOE);   //enable  the clock of portB RX = PE4 TX = PE5 p=465
+            delay = RCGC2_CLOCK_PORT;
+            GPIO_PORTE_LOCK_R = GPIO_LOCK_KEY;
+            GPIO_PORTE_CR_R |= 0x30;
+            GPIO_PORTE_AMSEL_R &= ~0x30;
+            GPIO_PORTE_PCTL_R &= ~ 0x00ff0000;
+            GPIO_PORTE_AFSEL_R &= ~ 0x30                // is no alternate fun ?????????????????????????????
+                    GPIO_PORTE_DEN_R |= 0x30;
+            GPIO_PORTE_DIR_R |= 0x30;
+            GPIO_PORTE_DATA_R &= ~0x30;
+        }
+        if(config->can_port == F)
+        {
+            RCGC2_CLOCK_PORT|=(1<<GPIOF);   //enable  the clock of portB RX = PE4 TX = PE5 p=465
+            delay = RCGC2_CLOCK_PORT;
+            GPIO_PORTF_LOCK_R = GPIO_LOCK_KEY;
+            GPIO_PORTF_CR_R |= 0x09;
+            GPIO_PORTF_AMSEL_R &= ~ 0x09;
+            GPIO_PORTF_PCTL_R &= ~ 0x0000f00f;
+            GPIO_PORTF_AFSEL_R &= ~ 0x09;                // is no alternate fun ?????????????????????????????
+            GPIO_PORTF_DEN_R |= 0x09;
+            GPIO_PORTF_DIR_R |= 0x09;
+            GPIO_PORTF_DATA_R &= ~ 0x09;
+        }
+
+    }
+    if(config->can_mode == CAN_0)
+    {
+        RCGC0_CLOCK_MODULE|=(1<< CAN_1); //enable the can clock of the module CAN1 pin = 25 ,p= 457 p=465
+        if(config->can_port == A)
+        {
+            RCGC2_CLOCK_PORT|=(1<<GPIOA);   //enable  the clock of portB RX = PE4 TX = PE5 p=465
+            delay = RCGC2_CLOCK_PORT;
+            GPIO_PORTA_LOCK_R = GPIO_LOCK_KEY;
+            GPIO_PORTA_CR_R |= 0x03;
+            GPIO_PORTA_AMSEL_R &= ~ 0x03;
+            GPIO_PORTA_PCTL_R &= ~ 0x000000ff;
+            GPIO_PORTA_AFSEL_R &= ~ 0x03;                // is no alternate fun ?????????????????????????????
+            GPIO_PORTA_DEN_R |= 0x03;
+            GPIO_PORTA_DIR_R |= 0x03;
+            GPIO_PORTA_DATA_R &= ~ 0x03;
+        }
+
+    }
+}
+
+static void CANx_TIME_BIT(CAN_Config *config)
+{
+    // p 1076
+
+    if(config->can_mode == CAN_0)
+    {
+        CAN0_BIT_R |= config->bit_time.BRP | (config->bit_time.SJW <<6) | (config->bit_time.TSEG1 <<8) | (config->bit_time.TSEG2 <<12);
+    }
+    else if(config->can_mode == CAN_1)
+    {
+        CAN1_BIT_R |= config->bit_time.BRP | (config->bit_time.SJW <<6) | (config->bit_time.TSEG1 <<8) | (config->bit_time.TSEG2 <<12);
+    }
+}
+
+static void CANX_INIT(CAN_Config *config)
+{
+    CANx_PIN_INIT(*config);
+    CAN0_CTL_R |= CAN_CTL_INIT | CAN_CTL_CCE ;            // P = 1060
+    CANx_TIME_BIT(*config);
+    CAN0_CTL_R &= ~ CAN_CTL_INIT;
+}
+
+static void SEND_MESSAGE(CAN_Config *config , Message_Config *M_config)
+{
+    if(config->can_mode == CAN_0)
+    {
+        CAN0_IF1CMSK_R |= CAN_IF1CMSK_WRNRD |CAN_IF1CMSK_MASK | CAN_IF1CMSK_DATAA | CAN_IF1CMSK_DATAB | CAN_IF1CMSK_CONTROL | CAN_IF1CMSK_ARB ;
+        if(M_config->id_bits == std)
+        {
+            CAN0_IF1MSK2_R |= (M_config->id_accept & 0x000007ff) <<2;
+            CAN0_IF1MSK2_R &= ~CAN_IF1MSK2_MXTD;
+            CAN0_IF1ARB2_R |= (M_Config->id_message & 0x000007ff) <<2;
+            CAN0_IF1ARB2_R &= ~CAN_IF1ARB2_XTD &~ CAN_IF1ARB2_DIR;
+            CAN0_IF1ARB2_R |= CAN_IF1ARB2_MSGVAL | CAN_IF1ARB2_DIR;
+        }
+    }
+    else if(config->can_mode == CAN_1)
+    {
+        CAN1_IF1CMSK_R |= CAN_IF1CMSK_WRNRD |CAN_IF1CMSK_MASK | CAN_IF1CMSK_DATAA | CAN_IF1CMSK_DATAB | CAN_IF1CMSK_CONTROL | CAN_IF1CMSK_ARB ;
+    }
+
+}

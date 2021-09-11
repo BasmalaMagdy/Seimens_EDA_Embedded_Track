@@ -1,0 +1,54 @@
+/*
+ * can.h
+ *
+ *  Created on: Sep 7, 2021
+ *      Author: hs
+ */
+
+#ifndef CAN_H_
+#define CAN_H_
+// **************************** mode ********************************
+#define RCGC0_CLOCK_MODE       (*((volatile unsigned long*)0x400FE100))
+#define RCGC2_CLOCK_PORT       (*((volatile unsigned long*)0x400FE108))
+
+
+//********************** REG ************************
+
+#define GPIOA 0
+#define GPIOB 1
+#define GPIOE 4
+#define GPIOF 5
+
+#define can0 24
+#define can1 25
+
+typedef enum
+{
+     CAN_0, CAN_1;
+}CAN_MODE_Config;
+
+
+typedef struct
+{
+    uint8_t TSEG2;
+    uint8_t TSEG1;
+    uint8_t SJW;
+    uint8_t BRP;
+}BIT_TIME_Config;
+
+typedef struct
+{
+    char A;
+    char B;
+    char E;
+    char F;
+}CAN_PORT_Config;
+
+typedef struct
+{
+    CAN_MODE_Config can_mode;
+    BIT_TIME_Config bit_time;
+    CAN_PORT_Config can_port;
+}CAN_Config;
+
+#endif /* CAN_H_ */
